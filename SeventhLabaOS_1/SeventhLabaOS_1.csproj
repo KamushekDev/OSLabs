@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A2965985-3D0B-45C1-875C-E9192A2BCC66}</ProjectGuid>
+    <ProjectGuid>{889BA948-EA1D-40A5-BF8E-1CB74965BAFC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>FirstLabaOS</RootNamespace>
-    <AssemblyName>FirstLabaOS</AssemblyName>
+    <RootNamespace>SeventhLabaOS_1</RootNamespace>
+    <AssemblyName>SeventhLabaOS_1</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="First.cs" />
+    <Compile Include="Seventh_1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

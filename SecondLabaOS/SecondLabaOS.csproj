@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A2965985-3D0B-45C1-875C-E9192A2BCC66}</ProjectGuid>
+    <ProjectGuid>{890153E4-2FBF-4AE3-9669-B0791CDF4C83}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>FirstLabaOS</RootNamespace>
-    <AssemblyName>FirstLabaOS</AssemblyName>
+    <RootNamespace>SecondLabaOS</RootNamespace>
+    <AssemblyName>SecondLabaOS</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="First.cs" />
+    <Compile Include="Second.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

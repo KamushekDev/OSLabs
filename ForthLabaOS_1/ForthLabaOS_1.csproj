@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A2965985-3D0B-45C1-875C-E9192A2BCC66}</ProjectGuid>
+    <ProjectGuid>{8449EDE9-8F88-4F8A-AD1B-1B9FD4AC3916}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>FirstLabaOS</RootNamespace>
-    <AssemblyName>FirstLabaOS</AssemblyName>
+    <RootNamespace>ForthLabaOS_1</RootNamespace>
+    <AssemblyName>ForthLabaOS_1</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="First.cs" />
+    <Compile Include="Forth_1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

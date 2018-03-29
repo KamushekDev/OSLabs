@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A2965985-3D0B-45C1-875C-E9192A2BCC66}</ProjectGuid>
+    <ProjectGuid>{D1C95AB6-1935-4B0D-87AF-7D6804242307}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>FirstLabaOS</RootNamespace>
-    <AssemblyName>FirstLabaOS</AssemblyName>
+    <RootNamespace>EighthLabaOS_2</RootNamespace>
+    <AssemblyName>EighthLabaOS_2</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="First.cs" />
+    <Compile Include="Eighth_2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
