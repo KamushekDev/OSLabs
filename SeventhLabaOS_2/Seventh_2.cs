@@ -10,7 +10,7 @@ namespace SeventhLabaOS_2 {
 		static volatile bool isActive = true;
 
 		static void Listener() {
-			MessageQueue messageQueue = new MessageQueue("myAwesomeQueue");
+			MessageQueue messageQueue = new MessageQueue(".\\myAwesomeQueue");
 
 			while (isActive) {
 				Console.WriteLine(messageQueue.Receive());
