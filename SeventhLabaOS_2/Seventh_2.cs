@@ -12,9 +12,8 @@ namespace SeventhLabaOS_2 {
 		static void Listener() {
 			MessageQueue messageQueue = new MessageQueue("myAwesomeQueue");
 
-			long i = 0;
 			while (isActive) {
-				messageQueue.Receive();
+				Console.WriteLine(messageQueue.Receive());
 			}
 			Console.WriteLine("Thread was interrupted!");
 		}
