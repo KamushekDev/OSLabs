@@ -17,10 +17,13 @@ namespace FifthLabaOS_1 {
 			Semaphore semaphore = new Semaphore(2, 2, "semka");
 			MemoryMappedViewAccessor writer = sharedMemory.CreateViewAccessor(0, 1, MemoryMappedFileAccess.ReadWrite);
 			while (!flag1) {
-				semaphore.WaitOne(10);
-				writer.Write(0, (byte)random.Next(byte.MaxValue));
-				semaphore.Release();
-				Thread.Sleep(10);
+				if (!semaphore.WaitOne(10)) {
+					//doign smth
+				} else {
+					writer.Write(0, (byte)random.Next(byte.MaxValue));
+					Thread.Sleep(10);
+					semaphore.Release();
+				}
 			}
 			Console.WriteLine($"Thread {number} was interrupted.");
 			return "First";

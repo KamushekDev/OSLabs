@@ -15,12 +15,15 @@ namespace SecondLabaOS {
 		static string FirstThread(int number) {
 			if (Mutex.TryOpenExisting("myAwesomeMutex", out Mutex mutex)) {
 				while (!flag1) {
-					mutex.WaitOne(10);
-					for (int i = 0; i<N; i++) {
-						Console.Write(number);
+					if (!mutex.WaitOne(10)) {
+						//doing smth
+					} else {
+						for (int i = 0; i<N; i++) {
+							Console.Write(number);
+						}
+						mutex.ReleaseMutex();
+						Thread.Sleep(10);
 					}
-					mutex.ReleaseMutex();
-					Thread.Sleep(10);
 				}
 			}
 			Console.WriteLine($"Thread {number} was interrupted.");
@@ -30,12 +33,15 @@ namespace SecondLabaOS {
 		static string SecondThread(int number) {
 			if (Mutex.TryOpenExisting("myAwesomeMutex", out Mutex mutex)) {
 				while (!flag2) {
-					mutex.WaitOne(10);
-					for (int i = 0; i<N; i++) {
-						Console.Write(number);
+					if (!mutex.WaitOne(10)) {
+						//doing smth
+					} else {
+						for (int i = 0; i<N; i++) {
+							Console.Write(number);
+						}
+						mutex.ReleaseMutex();
+						Thread.Sleep(17);
 					}
-					mutex.ReleaseMutex();
-					Thread.Sleep(10);
 				}
 			}
 			Console.WriteLine($"Thread {number} was interrupted.");

@@ -16,10 +16,13 @@ namespace FifthLabaOS_2 {
 			Semaphore semaphore = Semaphore.OpenExisting("semka");
 			MemoryMappedViewAccessor reader = sharedMemory.CreateViewAccessor(0, 1, MemoryMappedFileAccess.ReadWrite);
 			while (!flag1) {
-				semaphore.WaitOne(10);
-				Console.WriteLine("Было прочитано число: {0}", reader.ReadByte(0));
-				semaphore.Release();
-				Thread.Sleep(10);
+				if (!semaphore.WaitOne(10)) {
+					//doign smth
+				} else {
+					Console.WriteLine("Было прочитано число: {0}", reader.ReadByte(0));
+					Thread.Sleep(10);
+					semaphore.Release();
+				}
 			}
 			Console.WriteLine($"Thread {number} was interrupted.");
 			return "First";

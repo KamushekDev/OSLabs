@@ -16,19 +16,16 @@ namespace ForthLabaOs_2 {
 			while (!flag2) {
 				using (FileStream stream = new FileStream("../../../file.txt", FileMode.Append, FileAccess.Write, FileShare.Write)) {
 					using (StreamWriter sw = new StreamWriter(stream)) {
-						Console.WriteLine("start");
 						sw.AutoFlush=true;
-						semaphore.WaitOne(10);
-						for (int i = 0; i<5; i++) {
-							Console.Write("print+");
-							sw.Write(number);
+						if (!semaphore.WaitOne(10)) {
+							//doing smth
+						} else {
+							for (int i = 0; i<5; i++) {
+								sw.Write(number);
+							}
+							Thread.Sleep(34);
+							semaphore.Release();
 						}
-						sw.Flush();
-						stream.Flush();
-
-						semaphore.Release();
-						Console.WriteLine("end");
-						Thread.Sleep(30);
 					}
 				}
 			}
@@ -39,7 +36,7 @@ namespace ForthLabaOs_2 {
 
 		static void Main(string[] args) {
 
-			
+
 
 			Task<string> task2;
 
