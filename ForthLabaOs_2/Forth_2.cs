@@ -10,7 +10,6 @@ namespace ForthLabaOs_2 {
 	class Forth_2 {
 		static volatile bool flag2 = false;
 
-
 		static string SecondThread(int number) {
 			Semaphore semaphore = Semaphore.OpenExisting("sem");
 			while (!flag2) {
@@ -33,10 +32,7 @@ namespace ForthLabaOs_2 {
 			return "Second";
 		}
 
-
 		static void Main(string[] args) {
-
-
 
 			Task<string> task2;
 
